@@ -4,7 +4,8 @@ const chatContainer = document.querySelector(".chat-container");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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";
+const API_KEY = process.env.POWERAI_API_KEY || 'fallback_key';
+
 const initialHeight = chatInput.scrollHeight;
 
 const loadDataFromLocalstorage = () => {
